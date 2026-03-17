@@ -5,4 +5,4 @@ from rest_framework.response import Response
 
 class HealthCheck(APIView):
     def get(self, request):
-        return Response({'message': 'Hello from server V1'}, status=status.HTTP_200_OK)
+        return Response({'message': 'Hello from server V2'}, status=status.HTTP_200_OK)
