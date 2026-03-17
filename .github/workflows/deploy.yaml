@@ -22,4 +22,7 @@ jobs:
           script: |
             cd /home/ubuntu/learn-CI-CD/myproject
             git pull origin dev
-            docker-compose up -d --build
+            docker build -t myproject .
+            docker stop container
+            docker rm container
+            docker run -itd -p 8000:8000 --name container myproject
